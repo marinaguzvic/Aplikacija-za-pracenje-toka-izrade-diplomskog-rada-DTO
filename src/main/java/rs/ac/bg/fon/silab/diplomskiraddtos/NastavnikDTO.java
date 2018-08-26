@@ -22,6 +22,10 @@ public class NastavnikDTO extends ClanSistemaDTO{
 
     public NastavnikDTO() {
     }
+    
+        public NastavnikDTO(Long clanSistemaId) {
+            this.clanSistemaId = clanSistemaId;
+    }
 
     public NastavnikDTO(Long clanSistemaId, String brojTelefona, String ime, String prezime, String jmbg, String datumRodjenja, String zvanje, String titula, String katedra) {
         this.clanSistemaId = clanSistemaId;

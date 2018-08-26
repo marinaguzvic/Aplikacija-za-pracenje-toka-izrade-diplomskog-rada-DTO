@@ -11,23 +11,23 @@ package rs.ac.bg.fon.silab.diplomskiraddtos;
  */
 public class ClanDTO extends AbstractDTO{
     private String ulogaClanaKomisije;
-    private Long nastavnik;
+    private NastavnikDTO nastavnik;
 
     public ClanDTO() {
     }
 
-    public ClanDTO(String ulogaClanaKomisije, Long nastavnik) {
+    public ClanDTO(String ulogaClanaKomisije, NastavnikDTO nastavnik) {
         this.ulogaClanaKomisije = ulogaClanaKomisije;
         this.nastavnik = nastavnik;
     }
 
 
 
-    public Long getNastavnik() {
+    public NastavnikDTO getNastavnik() {
         return nastavnik;
     }
 
-    public void setNastavnik(Long nastavnik) {
+    public void setNastavnik(NastavnikDTO nastavnik) {
         this.nastavnik = nastavnik;
     }
 

@@ -5,6 +5,9 @@
  */
 package rs.ac.bg.fon.silab.diplomskiraddtos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Marina Guzvic
@@ -59,5 +62,33 @@ public class TemaDiplomskogRadaDTO extends AbstractDTO {
         this.predmetIdFk = predmetIdFk;
     }
     
+    public List<String> getProperties() {
+        List<String> list = new ArrayList<>();
+        list.add("Naziv teme");
+        list.add("Opis teme");
+        list.add("Predmet");
+        return list;
+    }
     
+    public List<String> getCrucialProperties() {
+        List<String> list = new ArrayList<>();
+        list.add("Naziv teme");
+        list.add("Predmet");
+        return list;
+    }
+
+    public String getPropertyByName(String property) {
+
+            switch (property) {
+                case "Naziv teme":
+                    return nazivTeme;
+                case "Opis teme":
+                    return opisTeme;
+                case "Predmet":
+                    return predmetIdFk.getNazivPredmeta();
+                default:
+                    return null;
+
+            }
+    }
 }

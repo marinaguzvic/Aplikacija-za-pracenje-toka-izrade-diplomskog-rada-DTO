@@ -17,7 +17,7 @@ public class DiplomskiRadPrijaviDTO extends AbstractDTO {
     public DiplomskiRadPrijaviDTO() {
     }
 
-    public DiplomskiRadPrijaviDTO(Long diplomskiRadId, Long studentIdFk, Long temaIdFk) {
+    public DiplomskiRadPrijaviDTO(Long studentIdFk, Long temaIdFk) {
         this.studentIdFk = studentIdFk;
         this.temaIdFk = temaIdFk;
     }

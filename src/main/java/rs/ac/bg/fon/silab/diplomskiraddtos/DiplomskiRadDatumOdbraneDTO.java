@@ -12,20 +12,20 @@ import java.util.Date;
  * @author Marina Guzvic
  */
 public class DiplomskiRadDatumOdbraneDTO extends AbstractDTO {
-    private Date datumOdbrane;
+    private String datumOdbrane;
 
     public DiplomskiRadDatumOdbraneDTO() {
     }
 
-    public DiplomskiRadDatumOdbraneDTO(Date datumOdbrane) {
+    public DiplomskiRadDatumOdbraneDTO(String datumOdbrane) {
         this.datumOdbrane = datumOdbrane;
     }
     
-    public Date getDatumOdbrane() {
+    public String getDatumOdbrane() {
         return datumOdbrane;
     }
 
-    public void setDatumOdbrane(Date datumOdbrane) {
+    public void setDatumOdbrane(String datumOdbrane) {
         this.datumOdbrane = datumOdbrane;
     }
     

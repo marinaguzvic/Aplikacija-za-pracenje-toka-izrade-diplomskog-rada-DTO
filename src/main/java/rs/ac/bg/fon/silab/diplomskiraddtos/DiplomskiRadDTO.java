@@ -24,12 +24,13 @@ public class DiplomskiRadDTO extends AbstractDTO {
     private List<ClanKaKlijentuDTO> clans;
     private StudentDTO studentIdFk;
     private TemaDiplomskogRadaDTO temaIdFk;
-    private List<String> dokuments;
+    private List<DokumentDTO> dokuments;
 
     public DiplomskiRadDTO() {
+        dokuments = new ArrayList<>();
     }
 
-    public DiplomskiRadDTO(Long diplomskiRadId, String datumPrijave, String datumOdobravanja, String datumOdbrane, String datumPredaje, Integer ocena, String status, List<ClanKaKlijentuDTO> clans, StudentDTO studentIdFk, TemaDiplomskogRadaDTO temaIdFk, List<String> dokuments) {
+    public DiplomskiRadDTO(Long diplomskiRadId, String datumPrijave, String datumOdobravanja, String datumOdbrane, String datumPredaje, Integer ocena, String status, List<ClanKaKlijentuDTO> clans, StudentDTO studentIdFk, TemaDiplomskogRadaDTO temaIdFk, List<DokumentDTO> dokuments) {
         this.diplomskiRadId = diplomskiRadId;
         this.datumPrijave = datumPrijave;
         this.datumOdobravanja = datumOdobravanja;
@@ -123,11 +124,11 @@ public class DiplomskiRadDTO extends AbstractDTO {
         this.temaIdFk = temaIdFk;
     }
 
-    public List<String> getDokuments() {
+    public List<DokumentDTO> getDokuments() {
         return dokuments;
     }
 
-    public void setDokuments(List<String> dokuments) {
+    public void setDokuments(List<DokumentDTO> dokuments) {
         this.dokuments = dokuments;
     }
 
@@ -156,12 +157,25 @@ public class DiplomskiRadDTO extends AbstractDTO {
                 }
                 return clanovi;
             case "Ocena":
-                return ocena + "";
+                return ocena == null?"": ocena + "";
+
             default:
                 return null;
 
         }
     }
+
+    public String getUrlByDokument(String id) {
+        return "localhost:8080/diplomskirads/" + diplomskiRadId + "/dokuments/" + id;
+    }
+
+//    public List<DokumentDTO> findDokumentNames() {
+//        List<String> dokumenti = new ArrayList<>();
+//        for (DokumentDTO dokument : dokuments) {
+//            dokumenti.add(dokument.getRb() + ") " + dokument.getNazivDokumenta() + " (" + dokument.getTipDokumenta() + ")");
+//        }
+//        return dokumenti;
+//    }
 
     public List<String> getProperties() {
         List<String> list = new ArrayList<>();
@@ -173,6 +187,16 @@ public class DiplomskiRadDTO extends AbstractDTO {
         list.add("Datum predaje");
         list.add("Datum odbrane");
         list.add("Clanovi komisije");
+        list.add("Ocena");
+        return list;
+    }
+    
+    public List<String> getCrucialProperties() {
+        List<String> list = new ArrayList<>();
+        list.add("Student");
+        list.add("Tema");
+        list.add("Status");
+        list.add("Datum odbrane");
         list.add("Ocena");
         return list;
     }
@@ -207,5 +231,9 @@ public class DiplomskiRadDTO extends AbstractDTO {
             list.add("Ocena");
         }
         return list;
+    }
+    
+    public String generateUrl(){
+        return "diplomskirads/" + getDiplomskiRadId() + "/";
     }
 }

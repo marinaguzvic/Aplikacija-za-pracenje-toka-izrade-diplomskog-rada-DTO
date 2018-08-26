@@ -134,4 +134,11 @@ public class ClanSistemaDTO extends AbstractDTO{
     public String getPotpisClana(){
         return getNazivTipaClana() + ": " + getIme() + " " + getPrezime();
     }
+
+    public List<String> getCrucialProperties() {
+        List<String> list = new ArrayList<>();
+        list.add("Ime");
+        list.add("Prezime");
+        return list;
+    }
 }

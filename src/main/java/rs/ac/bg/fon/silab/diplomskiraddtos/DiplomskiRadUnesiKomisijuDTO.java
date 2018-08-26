@@ -5,6 +5,7 @@
  */
 package rs.ac.bg.fon.silab.diplomskiraddtos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,6 +16,7 @@ public class DiplomskiRadUnesiKomisijuDTO extends AbstractDTO {
         private List<ClanDTO> clans;
 
     public DiplomskiRadUnesiKomisijuDTO() {
+        clans = new ArrayList<>();
     }
 
     public DiplomskiRadUnesiKomisijuDTO(List<ClanDTO> clans) {

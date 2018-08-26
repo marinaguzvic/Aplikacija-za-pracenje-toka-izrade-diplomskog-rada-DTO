@@ -23,6 +23,10 @@ public class PredmetDTO extends AbstractDTO{
         this.katedra = katedra;
     }
 
+    public PredmetDTO(Long parameter) {
+        predmetId = parameter;
+    }
+
     
 
     public Long getPredmetId() {

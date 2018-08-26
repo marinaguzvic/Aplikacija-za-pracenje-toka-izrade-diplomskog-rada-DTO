@@ -60,6 +60,13 @@ public class StudentDTO extends ClanSistemaDTO {
         list.add("Godina studija");
         return list;
     }
+    
+    @Override
+    public List<String> getCrucialProperties() {
+        List<String> list = super.getCrucialProperties();
+        list.add("Broj indeksa");
+        return list;
+    }
 
     @Override
     public String getPropertyByName(String property) {
