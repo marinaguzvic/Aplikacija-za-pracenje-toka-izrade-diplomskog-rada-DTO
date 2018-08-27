@@ -21,6 +21,8 @@ public class ClanDTO extends AbstractDTO{
         this.nastavnik = nastavnik;
     }
 
+    
+
 
 
     public NastavnikDTO getNastavnik() {
@@ -38,6 +40,8 @@ public class ClanDTO extends AbstractDTO{
     public void setUlogaClanaKomisije(String ulogaClanaKomisije) {
         this.ulogaClanaKomisije = ulogaClanaKomisije;
     }
+
+
     
     
 }

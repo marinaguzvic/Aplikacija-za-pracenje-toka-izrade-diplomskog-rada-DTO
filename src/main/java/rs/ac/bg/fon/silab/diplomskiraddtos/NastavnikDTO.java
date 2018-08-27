@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -99,4 +100,7 @@ public class NastavnikDTO extends ClanSistemaDTO{
         }
     }
     
+    public boolean amongClanovi(List<ClanKaKlijentuDTO> clans){
+        return clans.stream().anyMatch((clan) -> (Objects.equals(clan.getNastavnikIdFk().getClanSistemaId(), clanSistemaId)));
+    }
 }
