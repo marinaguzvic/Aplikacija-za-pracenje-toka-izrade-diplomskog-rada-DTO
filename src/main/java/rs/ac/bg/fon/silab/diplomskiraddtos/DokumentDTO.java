@@ -9,7 +9,7 @@ package rs.ac.bg.fon.silab.diplomskiraddtos;
  *
  * @author Marina Guzvic
  */
-public class DokumentDTO {
+public class DokumentDTO extends AbstractDTO{
     private int rb;
     private String nazivDokumenta;
     private String tipDokumenta;
