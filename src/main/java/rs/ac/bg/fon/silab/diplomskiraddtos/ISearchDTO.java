@@ -5,14 +5,10 @@
  */
 package rs.ac.bg.fon.silab.diplomskiraddtos;
 
-import java.util.List;
-
 /**
  *
  * @author Marina Guzvic
  */
-public abstract class AbstractDTO {
-    public abstract List<String> findProperties();
-    public abstract List<String> findCrucialProperties();
-    public abstract String findPropertyByName(String property);
+public interface ISearchDTO {
+    
 }

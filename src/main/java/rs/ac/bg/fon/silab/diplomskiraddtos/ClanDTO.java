@@ -5,6 +5,8 @@
  */
 package rs.ac.bg.fon.silab.diplomskiraddtos;
 
+import java.util.List;
+
 /**
  *
  * @author Marina Guzvic
@@ -39,6 +41,21 @@ public class ClanDTO extends AbstractDTO{
 
     public void setUlogaClanaKomisije(String ulogaClanaKomisije) {
         this.ulogaClanaKomisije = ulogaClanaKomisije;
+    }
+
+    @Override
+    public List<String> findProperties() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<String> findCrucialProperties() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String findPropertyByName(String property) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 

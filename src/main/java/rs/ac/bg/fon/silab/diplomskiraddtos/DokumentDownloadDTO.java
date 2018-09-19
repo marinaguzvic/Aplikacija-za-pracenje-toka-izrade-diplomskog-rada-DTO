@@ -11,32 +11,42 @@ import java.util.List;
  *
  * @author Marina Guzvic
  */
-public class KatedraDTO extends AbstractDTO{
-     private Long katedraId;
-    private String nazivKatedre;
+public class DokumentDownloadDTO extends AbstractDTO{
+    private String nazivDokumenta;
+    private String tipDokumenta;
+    private byte[] sadrzajDokumenta;
 
-    public KatedraDTO() {
+    public DokumentDownloadDTO() {
     }
 
-    public KatedraDTO(Long katedraId, String nazivKatedre) {
-        this.katedraId = katedraId;
-        this.nazivKatedre = nazivKatedre;
+    public DokumentDownloadDTO(String nazivDokumenta, String tipDokumenta, byte[] sadrzajDokumenta) {
+        this.nazivDokumenta = nazivDokumenta;
+        this.tipDokumenta = tipDokumenta;
+        this.sadrzajDokumenta = sadrzajDokumenta;
     }
 
-    public Long getKatedraId() {
-        return katedraId;
+    public String getNazivDokumenta() {
+        return nazivDokumenta;
     }
 
-    public void setKatedraId(Long katedraId) {
-        this.katedraId = katedraId;
+    public void setNazivDokumenta(String nazivDokumenta) {
+        this.nazivDokumenta = nazivDokumenta;
     }
 
-    public String getNazivKatedre() {
-        return nazivKatedre;
+    public String getTipDokumenta() {
+        return tipDokumenta;
     }
 
-    public void setNazivKatedre(String nazivKatedre) {
-        this.nazivKatedre = nazivKatedre;
+    public void setTipDokumenta(String tipDokumenta) {
+        this.tipDokumenta = tipDokumenta;
+    }
+
+    public byte[] getSadrzajDokumenta() {
+        return sadrzajDokumenta;
+    }
+
+    public void setSadrzajDokumenta(byte[] sadrzajDokumenta) {
+        this.sadrzajDokumenta = sadrzajDokumenta;
     }
 
     @Override

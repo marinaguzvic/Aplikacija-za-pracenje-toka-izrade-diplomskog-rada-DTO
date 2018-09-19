@@ -132,7 +132,7 @@ public class DiplomskiRadDTO extends AbstractDTO {
         this.dokuments = dokuments;
     }
 
-    public String getPropertyByName(String property) {
+    public String findPropertyByName(String property) {
 
         switch (property) {
             case "Student":
@@ -177,7 +177,7 @@ public class DiplomskiRadDTO extends AbstractDTO {
 //        return dokumenti;
 //    }
 
-    public List<String> getProperties() {
+    public List<String> findProperties() {
         List<String> list = new ArrayList<>();
         list.add("Student");
         list.add("Tema");
@@ -191,7 +191,7 @@ public class DiplomskiRadDTO extends AbstractDTO {
         return list;
     }
     
-    public List<String> getCrucialProperties() {
+    public List<String> findCrucialProperties() {
         List<String> list = new ArrayList<>();
         list.add("Student");
         list.add("Tema");

@@ -5,6 +5,8 @@
  */
 package rs.ac.bg.fon.silab.diplomskiraddtos;
 
+import java.util.List;
+
 
 /**
  *
@@ -40,6 +42,21 @@ public class DiplomskiRadPrijaviDTO extends AbstractDTO {
 
     public void setTemaIdFk(Long temaIdFk) {
         this.temaIdFk = temaIdFk;
+    }
+
+    @Override
+    public List<String> findProperties() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<String> findCrucialProperties() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String findPropertyByName(String property) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

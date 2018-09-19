@@ -72,8 +72,8 @@ public class NastavnikDTO extends ClanSistemaDTO{
 
     
         @Override
-    public List<String> getProperties() {
-        List<String> list = super.getProperties();
+    public List<String> findProperties() {
+        List<String> list = super.findProperties();
         list.add("Titula");
         list.add("Zvanje");
         list.add("Katedra");
@@ -81,8 +81,8 @@ public class NastavnikDTO extends ClanSistemaDTO{
     }
 
     @Override
-    public String getPropertyByName(String property) {
-        String prop = super.getPropertyByName(property);
+    public String findPropertyByName(String property) {
+        String prop = super.findPropertyByName(property);
         if (prop != null) {
             return prop;
         } else {

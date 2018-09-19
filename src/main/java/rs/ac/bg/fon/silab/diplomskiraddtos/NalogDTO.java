@@ -5,6 +5,8 @@
  */
 package rs.ac.bg.fon.silab.diplomskiraddtos;
 
+import java.util.List;
+
 /**
  *
  * @author Marina Guzvic
@@ -35,6 +37,21 @@ public class NalogDTO extends AbstractDTO {
 
     public void setSifra(String sifra) {
         this.sifra = sifra;
+    }
+
+    @Override
+    public List<String> findProperties() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<String> findCrucialProperties() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String findPropertyByName(String property) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

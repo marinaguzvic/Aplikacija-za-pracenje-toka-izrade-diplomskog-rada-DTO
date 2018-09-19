@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Marina Guzvic
  */
-public class StudentSearchDTO extends ClanSistemaDTO{
+public class StudentSearchDTO extends ClanSistemaDTO implements ISearchDTO{
     private String brojIndeksa;
     private Integer [] godineStudija;
 

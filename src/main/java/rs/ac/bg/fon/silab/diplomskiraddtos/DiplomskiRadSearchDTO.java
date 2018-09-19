@@ -9,7 +9,7 @@ package rs.ac.bg.fon.silab.diplomskiraddtos;
  *
  * @author Marina Guzvic
  */
-public class DiplomskiRadSearchDTO extends AbstractDTO {
+public class DiplomskiRadSearchDTO implements ISearchDTO {
     private String [] statuses;
     private String [] ulogaClanaKomisijes;
     private String imeStudenta;

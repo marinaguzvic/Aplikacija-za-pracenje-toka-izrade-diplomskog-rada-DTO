@@ -32,6 +32,21 @@ public class DiplomskiRadUnesiKomisijuDTO extends AbstractDTO {
     public void setClans(List<ClanDTO> clans) {
         this.clans = clans;
     }
+
+    @Override
+    public List<String> findProperties() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<String> findCrucialProperties() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String findPropertyByName(String property) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         
         
 }

@@ -92,7 +92,7 @@ public class ClanSistemaDTO extends AbstractDTO{
         this.tipClana = tipClana;
     }
 
-    public String getPropertyByName(String property) {
+    public String findPropertyByName(String property) {
 
         switch (property) {
             case "Ime":
@@ -112,7 +112,7 @@ public class ClanSistemaDTO extends AbstractDTO{
         }
     }
     
-    public List<String> getProperties(){
+    public List<String> findProperties(){
         List<String> list = new ArrayList<>();
         list.add("Ime");
         list.add("Prezime");
@@ -135,7 +135,7 @@ public class ClanSistemaDTO extends AbstractDTO{
         return getNazivTipaClana() + ": " + getIme() + " " + getPrezime();
     }
 
-    public List<String> getCrucialProperties() {
+    public List<String> findCrucialProperties() {
         List<String> list = new ArrayList<>();
         list.add("Ime");
         list.add("Prezime");

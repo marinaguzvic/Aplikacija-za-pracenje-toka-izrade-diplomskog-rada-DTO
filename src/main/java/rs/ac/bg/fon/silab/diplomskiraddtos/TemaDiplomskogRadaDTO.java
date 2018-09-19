@@ -62,7 +62,7 @@ public class TemaDiplomskogRadaDTO extends AbstractDTO {
         this.predmetIdFk = predmetIdFk;
     }
     
-    public List<String> getProperties() {
+    public List<String> findProperties() {
         List<String> list = new ArrayList<>();
         list.add("Naziv teme");
         list.add("Opis teme");
@@ -70,14 +70,14 @@ public class TemaDiplomskogRadaDTO extends AbstractDTO {
         return list;
     }
     
-    public List<String> getCrucialProperties() {
+    public List<String> findCrucialProperties() {
         List<String> list = new ArrayList<>();
         list.add("Naziv teme");
         list.add("Predmet");
         return list;
     }
 
-    public String getPropertyByName(String property) {
+    public String findPropertyByName(String property) {
 
             switch (property) {
                 case "Naziv teme":

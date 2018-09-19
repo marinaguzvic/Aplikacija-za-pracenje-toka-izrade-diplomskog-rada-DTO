@@ -54,23 +54,23 @@ public class StudentDTO extends ClanSistemaDTO {
     }
 
     @Override
-    public List<String> getProperties() {
-        List<String> list = super.getProperties();
+    public List<String> findProperties() {
+        List<String> list = super.findProperties();
         list.add("Broj indeksa");
         list.add("Godina studija");
         return list;
     }
     
     @Override
-    public List<String> getCrucialProperties() {
-        List<String> list = super.getCrucialProperties();
+    public List<String> findCrucialProperties() {
+        List<String> list = super.findCrucialProperties();
         list.add("Broj indeksa");
         return list;
     }
 
     @Override
-    public String getPropertyByName(String property) {
-        String prop = super.getPropertyByName(property);
+    public String findPropertyByName(String property) {
+        String prop = super.findPropertyByName(property);
         if (prop != null) {
             return prop;
         } else {
